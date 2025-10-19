@@ -121,7 +121,7 @@ meshN012.castShadow = true;
 //
 var geometryN013 = new THREE.CylinderGeometry(1.5,1.5,0.5,32); 
 var materialN013 = new THREE.MeshLambertMaterial({
-olor:0xC2B9A5, side: THREE.DoubleSide
+color:0xC2B9A5, side: THREE.DoubleSide
 })
 
 var meshN013 =new THREE.Mesh(geometryN013,materialN013);
@@ -637,3 +637,4 @@ CATRINA.position.set(x,y,z);
 return CATRINA;
 
 }
+
