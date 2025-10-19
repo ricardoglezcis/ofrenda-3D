@@ -2,6 +2,9 @@
 <html lang="en"> 
 <head> 
     <title>Objetos de ofrenta </title>
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Ofrenda 3D interactiva para Día de Muertos">
 </head>
 <body>
     
@@ -85,6 +88,12 @@ import Cartel from "./objetos/cartel.js"
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor(0x241440);
 
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+    
+    renderer.setPixelRatio(1);
+    camera.fov = 75; 
+    camera.updateProjectionMatrix();
+}
 
 // 🎬 Creando nueva escena - Es el espacio donde se colocan los objetos
     var scene = new THREE.Scene();
@@ -536,4 +545,5 @@ sl01.shadow.camera.far = 200;
     }
 </script>
 </body>
+
 </html>
