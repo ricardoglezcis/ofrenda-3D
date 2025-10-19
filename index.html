@@ -95,10 +95,6 @@ import Cartel from "./objetos/cartel.js"
     camera.updateProjectionMatrix();
 }
 
-    renderer.domElement.style.display = 'block';
-renderer.domElement.style.width = '100%';
-renderer.domElement.style.height = '100%';
-
 // Manejar errores de contexto WebGL
 renderer.domElement.addEventListener('webglcontextlost', function(event) {
     event.preventDefault();
@@ -564,6 +560,7 @@ sl01.shadow.camera.far = 200;
 </body>
 
 </html>
+
 
 
 
