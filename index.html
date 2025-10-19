@@ -95,6 +95,16 @@ import Cartel from "./objetos/cartel.js"
     camera.updateProjectionMatrix();
 }
 
+    renderer.domElement.style.display = 'block';
+renderer.domElement.style.width = '100%';
+renderer.domElement.style.height = '100%';
+
+// Manejar errores de contexto WebGL
+renderer.domElement.addEventListener('webglcontextlost', function(event) {
+    event.preventDefault();
+    console.log('WebGL context lost');
+}, false);
+
 // 🎬 Creando nueva escena - Es el espacio donde se colocan los objetos
     var scene = new THREE.Scene();
 
@@ -554,5 +564,6 @@ sl01.shadow.camera.far = 200;
 </body>
 
 </html>
+
 
 
